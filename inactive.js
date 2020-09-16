@@ -36,4 +36,5 @@ setInterval(function () {
         console.log(user.lastActivity, minute,"Third")
         inactiveThirdStage();
     }
+    else{}
 }, 1000);
