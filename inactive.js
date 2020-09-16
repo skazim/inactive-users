@@ -24,17 +24,18 @@ setInterval(function () {
     var today = new Date();
     var minute = today.getMinutes();
     console.log(user.lastActivity, minute)
-    if(user.lastActivity + 2  <= minute){
-        console.log(user.lastActivity, minute,"First")
-        inactiveFirstStage();
+
+    if(user.lastActivity + 5  <= minute){
+        console.log(user.lastActivity, minute,"Third")
+        inactiveThirdStage();
     }
-    else if(user.lastActivity + 4  <= minute){
+    else if(user.lastActivity + 3  <= minute){
         console.log(user.lastActivity, minute,"Second")
         inactiveSecondStage();
     }
-    else if(user.lastActivity + 6  <= minute){
-        console.log(user.lastActivity, minute,"Third")
-        inactiveThirdStage();
+    else if(user.lastActivity + 1  <= minute){
+        console.log(user.lastActivity, minute,"First")
+        inactiveFirstStage();
     }
     else{}
 }, 1000);
